@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Laporan Keuangan</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Laporan Keuangan</h1>
+    <select id="business-select" required></select><br>
+    <button id="generate-report">Generate Laporan</button>
+
+    <div id="report">
+        <h2>Rincian</h2>
+        <p>Total Pemasukan: <span id="total-income">0</span></p>
+        <p>Total Pengeluaran: <span id="total-expense">0</span></p>
+        <p>Saldo: <span id="balance">0</span></p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

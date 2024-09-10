@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Manajemen Keuangan Bisnis</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Daftar Bisnis</h1>
+    <ul id="business-list"></ul>
+    <h2>Tambah Bisnis Baru</h2>
+    <form id="add-business-form">
+        <input type="text" id="business-name" placeholder="Nama Bisnis" required>
+        <button type="submit">Tambah Bisnis</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
