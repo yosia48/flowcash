@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 await firebase.auth().signOut();
                 alert('Anda telah logout.');
-                window.location.href = 'login.html'; // Arahkan kembali ke halaman login
+                window.location.href = 'index.html'; // Arahkan kembali ke halaman login
             } catch (error) {
                 alert('Logout gagal: ' + error.message);
             }
