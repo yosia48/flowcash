@@ -1,54 +1,33 @@
 /* css/styles.css */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
-    background-color: #f4f4f4;
+/* Tambahkan media query untuk responsif */
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    nav a, nav button {
+        width: 100%;
+    }
 }
 
-h1, h2 {
-    color: #333;
-}
-
-form {
-    margin-bottom: 20px;
-}
-
-input, select, button {
-    padding: 10px;
-    margin: 5px 0;
-    width: 100%;
-    max-width: 300px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #28a745;
+/* Gaya untuk menu navigasi */
+nav {
+    background-color: #333;
     color: white;
+    padding: 10px;
+}
+
+nav a, nav button {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    padding: 10px;
     border: none;
+    background: none;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #218838;
-}
-
-#report {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: #fff;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
+nav a:hover, nav button:hover {
+    background-color: #555;
 }

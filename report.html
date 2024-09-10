@@ -6,13 +6,29 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <nav>
+        <a href="index.html">Login</a>
+        <a href="manage.html">Kelola Bisnis</a>
+        <a href="pengeluaran.html">Pengeluaran</a>
+        <a href="report.html">Laporan</a>
+        <button id="logout-button">Logout</button>
+    </nav>
     <h1>Laporan Keuangan</h1>
-    <div id="report-content">
-        <!-- Konten laporan akan dimuat di sini -->
-    </div>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-    <script src="js/firebase-config.js"></script>
-    <script src="js/report.js"></script> <!-- Script untuk laporan -->
+    ...
+    <script>
+        // Cek status login
+        firebase.auth().onAuthStateChanged(user => {
+            if (!user) {
+                window.location = 'index.html'; // Redirect ke halaman login
+            }
+        });
+
+        // Logout
+        document.getElementById('logout-button').addEventListener('click', () => {
+            firebase.auth().signOut().then(() => {
+                window.location = 'index.html'; // Redirect ke halaman login
+            });
+        });
+    </script>
 </body>
 </html>

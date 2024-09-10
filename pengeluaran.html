@@ -6,18 +6,29 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <nav>
+        <a href="index.html">Login</a>
+        <a href="manage.html">Kelola Bisnis</a>
+        <a href="pengeluaran.html">Pengeluaran</a>
+        <a href="report.html">Laporan</a>
+        <button id="logout-button">Logout</button>
+    </nav>
     <h1>Tambah Pengeluaran</h1>
-    <form id="add-expense-form">
-        <select id="business-select" required></select><br>
-        <input type="number" id="expense-amount" placeholder="Jumlah" required><br>
-        <input type="text" id="expense-category" placeholder="Kategori" required><br>
-        <input type="text" id="expense-description" placeholder="Deskripsi"><br>
-        <button type="submit">Tambah Pengeluaran</button>
-    </form>
+    ...
+    <script>
+        // Cek status login
+        firebase.auth().onAuthStateChanged(user => {
+            if (!user) {
+                window.location = 'index.html'; // Redirect ke halaman login
+            }
+        });
 
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-    <script src="js/firebase-config.js"></script>
-    <script src="js/main.js"></script>
+        // Logout
+        document.getElementById('logout-button').addEventListener('click', () => {
+            firebase.auth().signOut().then(() => {
+                window.location = 'index.html'; // Redirect ke halaman login
+            });
+        });
+    </script>
 </body>
 </html>
