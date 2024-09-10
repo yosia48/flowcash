@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kelola Bisnis</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Kelola Bisnis</h1>
+    <div id="business-info"></div>
+    <h2>Pemasukan</h2>
+    <form id="add-income-form">
+        <input type="hidden" id="business-id" value="">
+        <input type="number" id="income-amount" placeholder="Jumlah" required><br>
+        <input type="text" id="income-category" placeholder="Kategori" required><br>
+        <input type="text" id="income-description" placeholder="Deskripsi"><br>
+        <button type="submit">Tambah Pemasukan</button>
+    </form>
+    <h2>Pengeluaran</h2>
+    <form id="add-expense-form">
+        <input type="hidden" id="business-id" value="">
+        <input type="number" id="expense-amount" placeholder="Jumlah" required><br>
+        <input type="text" id="expense-category" placeholder="Kategori" required><br>
+        <input type="text" id="expense-description" placeholder="Deskripsi"><br>
+        <button type="submit">Tambah Pengeluaran</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/manage.js"></script>
+</body>
+</html>
