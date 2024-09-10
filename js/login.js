@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Logout pengguna
-    const logoutBtn = document.getElementById('logout-btn'); // Tambahkan ID untuk tombol logout
+    const logoutBtn = document.getElementById('logout-button'); // Ganti ID di sini
     if (logoutBtn) {
         logoutBtn.addEventListener('click', async () => {
             try {
