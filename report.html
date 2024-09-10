@@ -7,9 +7,7 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Login</a>
         <a href="manage.html">Kelola Bisnis</a>
-        <a href="pengeluaran.html">Pengeluaran</a>
         <a href="report.html">Laporan</a>
         <button id="logout-button">Logout</button>
     </nav>
@@ -26,7 +24,9 @@
         // Logout
         document.getElementById('logout-button').addEventListener('click', () => {
             firebase.auth().signOut().then(() => {
-                window.location = 'index.html'; // Redirect ke halaman login
+                window.location.href = 'index.html'; // Redirect ke halaman login
+            }).catch((error) => {
+                console.error('Logout error:', error); // Tangani error jika ada
             });
         });
     </script>

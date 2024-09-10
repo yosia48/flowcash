@@ -43,4 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Logout pengguna
+    const logoutBtn = document.getElementById('logout-btn'); // Tambahkan ID untuk tombol logout
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await firebase.auth().signOut();
+                alert('Anda telah logout.');
+                window.location.href = 'login.html'; // Arahkan kembali ke halaman login
+            } catch (error) {
+                alert('Logout gagal: ' + error.message);
+            }
+        });
+    }
 });
